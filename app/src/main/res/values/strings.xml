@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sensor Data</string>
+    <string name="error_no_sensor">No Sensor</string>
+
+</resources>

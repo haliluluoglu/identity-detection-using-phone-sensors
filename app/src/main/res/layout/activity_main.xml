@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="16dp"
+    tools:layout_editor_absoluteY="16dp">
+
+    <TextView
+        android:id="@+id/accelerometerTWX"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="34dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/gyroTWY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/accelerometerSensorCheckBox"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lightTW"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="208dp"
+        android:layout_marginBottom="16dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/numberOfDataEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lightSensorCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/rotationTWX" />
+
+    <TextView
+        android:id="@+id/rotationTWX"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="15dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/lightTW"
+        app:layout_constraintEnd_toStartOf="@+id/rotationTWY"
+        app:layout_constraintStart_toEndOf="@+id/rotationSensorCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/magneticTWX" />
+
+    <TextView
+        android:id="@+id/rotationTWY"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="395dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStop"
+        app:layout_constraintEnd_toStartOf="@+id/rotationTWZ"
+        app:layout_constraintStart_toEndOf="@+id/rotationTWX"
+        app:layout_constraintTop_toBottomOf="@+id/magneticTWY" />
+
+    <TextView
+        android:id="@+id/rotationTWZ"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="396dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rotationTWY"
+        app:layout_constraintTop_toBottomOf="@+id/magneticTWZ" />
+
+    <TextView
+        android:id="@+id/magneticTWZ"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="35dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/rotationTWZ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/magneticTWY"
+        app:layout_constraintTop_toBottomOf="@+id/gyroTWZ" />
+
+    <TextView
+        android:id="@+id/magneticTWY"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="11dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/rotationTWY"
+        app:layout_constraintEnd_toStartOf="@+id/magneticTWZ"
+        app:layout_constraintStart_toEndOf="@+id/magneticTWX"
+        app:layout_constraintTop_toBottomOf="@+id/gyroTWY" />
+
+    <TextView
+        android:id="@+id/magneticTWX"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="9dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/rotationTWX"
+        app:layout_constraintEnd_toStartOf="@+id/magneticTWY"
+        app:layout_constraintStart_toEndOf="@+id/magneticSensorCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/gyroTWX" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="171dp"
+        android:layout_height="100dp"
+        android:text="START"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonStop"
+        app:layout_constraintHeight_percent="20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="50" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="171dp"
+        android:layout_height="100dp"
+        android:text="STOP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="20"
+        app:layout_constraintStart_toEndOf="@+id/buttonStart"
+        app:layout_constraintWidth_percent="50" />
+
+    <CheckBox
+        android:id="@+id/accelerometerSensorCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Accelerometer Sensor"
+        app:layout_constraintBottom_toTopOf="@+id/gyroscopeSensorCheckBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/gyroscopeSensorCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Gyroscope Sensor"
+        app:layout_constraintBottom_toTopOf="@+id/magneticSensorCheckBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accelerometerSensorCheckBox" />
+
+    <CheckBox
+        android:id="@+id/magneticSensorCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Magnetic Sensor"
+        app:layout_constraintBottom_toTopOf="@+id/rotationSensorCheckBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gyroscopeSensorCheckBox" />
+
+    <CheckBox
+        android:id="@+id/rotationSensorCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Rotation Sensor"
+        app:layout_constraintBottom_toTopOf="@+id/lightSensorCheckBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/magneticSensorCheckBox" />
+
+    <CheckBox
+        android:id="@+id/lightSensorCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="334dp"
+        android:text="Light Sensor"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rotationSensorCheckBox" />
+
+    <EditText
+        android:id="@+id/numberOfDataEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="277dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="How many data?"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lightSensorCheckBox" />
+
+    <TextView
+        android:id="@+id/gyroTWZ"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="24dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/magneticTWZ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gyroTWY"
+        app:layout_constraintTop_toBottomOf="@+id/accelerometerTWZ" />
+
+    <TextView
+        android:id="@+id/gyroTWY"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="25dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/magneticTWY"
+        app:layout_constraintEnd_toStartOf="@+id/gyroTWZ"
+        app:layout_constraintStart_toEndOf="@+id/gyroTWX"
+        app:layout_constraintTop_toBottomOf="@+id/accelerometerTWY" />
+
+    <TextView
+        android:id="@+id/gyroTWX"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="11dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/magneticTWX"
+        app:layout_constraintEnd_toStartOf="@+id/gyroTWY"
+        app:layout_constraintStart_toEndOf="@+id/gyroscopeSensorCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/accelerometerTWX" />
+
+    <TextView
+        android:id="@+id/accelerometerTWY"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="34dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/gyroTWY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/accelerometerTWX"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/accelerometerTWZ"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="34dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/gyroTWZ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/accelerometerTWY"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
